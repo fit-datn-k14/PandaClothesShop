@@ -28,15 +28,21 @@ def payments(request):
     cart_items = CartItem.objects.filter(user=request.user)
 
     for item in cart_items:
-        order_product = OrderProduct()
-        order_product.order_id = order.id
-        order_product.payment = payment
-        order_product.user_id = request.user.id
-        order_product.user_id = request.user.id
-        order_product.quantity = item.quantity
-        order_product.product_price = item.product.price
-        order_product.ordered = True
-        order_product.save()
+        orderproduct = OrderProduct()
+        orderproduct.order_id = order.id
+        orderproduct.payment = payment
+        orderproduct.user_id = request.user.id
+        orderproduct.product_id = request.product_id
+        orderproduct.quantity = item.quantity
+        orderproduct.product_price = item.product.price
+        orderproduct.ordered = True
+        orderproduct.save()
+
+        cart_item = CartItem.objects.get(id=item.id)
+        product_variation = cart_item.variations.all()
+        orderproduct = OrderProduct.objects.get(id=orderproduct.id)
+        orderproduct.variations.set(product_variation)
+        orderproduct.save()
 
 
     return render(request, 'orders/payments.html')
