@@ -30,10 +30,10 @@ def register(request):
         if form.is_valid():
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
-            phone_number = form.cleaned_data['phone_number']
             email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
             username = email.split('@')[0]
+            phone_number = form.cleaned_data['phone_number']
+            password = form.cleaned_data['password']
 
             user = Account.objects.create_user(first_name=first_name, last_name=last_name,
                                                email=email, username=username, password=password)
@@ -44,6 +44,7 @@ def register(request):
             # create user profile
             profile = UserProfile()
             profile.user_id = user.id
+            profile.profile_picture = 'default/default-user.png'
             profile.save()
 
             # User activation
