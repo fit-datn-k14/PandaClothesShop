@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import Account, UserProfile
 from django.utils.html import format_html
+from django.contrib.auth.models import Group
 
 # Register your models here.
 
@@ -25,6 +26,7 @@ class UserProfileAdmin(admin.ModelAdmin):
     
 admin.site.register(Account, AccountAdmin)
 admin.site.register(UserProfile, UserProfileAdmin)
+admin.site.unregister(Group)
 
-# developer.Hieu@gmail.com
-# Hieusky123
+admin.site.site_header = "Panda Clothes Administrator"
+admin.site.site_title = "Panda Admin"
