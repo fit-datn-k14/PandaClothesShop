@@ -26,4 +26,4 @@ cận, mua sắm những sản phẩm quần áo trực tuyến.
 - Tuần 6 : Thiết kế các bảng cấu trúc dữ liệu
 - Tuần 7 : Thiết kế chương 3 : Thiết kế và cài đặt hệ thống
 - Tuần 8 : Viết báo cáo kiểm thử, hoàn thiện kết luận, tài liệu tham khảo
-- Tuần 9 : Ch
+- Tuần 9 : Chỉnh sửa, hoàn thiện báo cáo
