@@ -1,7 +1,10 @@
 ### Họ tên: Trần Ngọc Hiếu
 ### MSV: 2019600086
 ## Tên đề tài : Xây dựng Website bán quần áo sử dụng Python Django, SQLite
-### Mô tả đề tài:
+### Mô tả đề tài: Website bán quần áo với tên gọi là Panda Clothes Shop. 
+Trang web sử dụng ngôn ngữ lập trình Python, Django 
+FrameWork, cơ sở dữ liệu SDLite, hỗ trợ người dùng tiếp 
+cận, mua sắm những sản phẩm quần áo trực tuyến.
 ### Tiến độ sản phẩm :
 - Tuần 1 :
 - Tuần 2 :
