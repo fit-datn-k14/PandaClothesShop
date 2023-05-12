@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from .models import Account, UserProfile
 from django.utils.html import format_html
 from django.contrib.auth.models import Group
+from django.contrib.auth.models import PermissionsMixin
 
 # Register your models here.
 
